@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<footer class="foot">
+    <h1>{{ my_object.dish_name }}</h1>
+</footer>
+ <div class="page_panel">
+    <div class="conteiner">
+    <div class="object" data-object-id="{{ object.id }}">
+        <div id="con" class="tail">
+            <div class="logo">
+                <img  src="{{ my_object.dish_image.url }}">
+            </div>
+
+        </div>
+        </div>
+        <div class="ingredient">
+            <div>
+                <h2>
+                    ИНГРЕДИЕНТЫ:
+                </h2>
+                <p>{{my_object.products}}</p>
+            </div>
+            <div href=""></div>
+        </div>
+    </div>
+    <div class="instruction">
+        <div>
+            <h2>
+                ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ:
+            </h2>
+            <p>{{ my_object.dish_info }}</p>
+
+        </div>
+    </div>
+
+ </div>
+</body>
+<footer class="foot">
+    <img src="/static/image/icon.jpg">
+    <h1>По маминому рецепту</h1>
+    <h2>Связаться с нами:&nbsp;&nbsp;&nbsp;&nbsp;+996(700)32-67-71</h2>
+</footer>
+
+{% endblock %}
+

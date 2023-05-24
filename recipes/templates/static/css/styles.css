@@ -1,0 +1,343 @@
+/* Reset стилей и базовые стили */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    border-radius: 50px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;  
+}
+
+/* Стили для шапки */
+
+header {
+    overflow: hidden;
+    position: relative;
+    top: 40px;
+    left: 90px;
+    border-radius: 10px;
+    background-color: rgba(192,192,192,0.5);
+    padding: 30px;
+    width: 87vw;
+    height: 160px
+}
+
+iframe {
+    overflow: hidden;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn1 {
+    background-color: #00ff7f;
+}
+
+.btn {
+    background-color: #00ff7f;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button[type="submit"] {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Стили для баннера */
+
+.banner {
+    background-image: url("image/background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.banner .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Стили для категорий */
+
+.categories {
+    padding: 40px 20px;
+}
+
+.categories p {
+    position: relative;
+    top: -30px;
+    text-align: center;
+    text-decoration: monospace;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.categories ul {
+    text-align: center;
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+    font-size: 24;
+}
+
+.categories ul li {
+    margin-right: 20px;
+}
+
+.categories ul li select {
+    position: relative;
+    top: -40px;
+    left: 70px;
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.categories ul li a {
+    position: relative;
+    left: 70px;
+    top: -37px;
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Стили для рецептов */
+
+.recipes {
+    padding: 40px 20px;
+}
+
+.recipes h1 {
+    position: relative;
+    top: 8px;
+    left: 100px;
+    width: 800px;
+    height: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.recipes h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recipe {
+    margin-bottom: 30px;
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+}
+
+.panel{
+    position: relative;
+    top: 10px;
+    left: 70px;
+    border-radius: 10px;
+    background-color: rgba(192,192,192,0.5);
+    padding: 30px;
+    width: 87vw;
+    overflow:auto;
+}
+
+.panel_sign{
+    position: relative;
+    top: 50px;
+    left: 490px;
+    border-radius: 10px;
+    background-color: rgba(192,192,192,0.5);
+    padding: 80px;
+    width: 400px;
+    overflow: auto;
+}
+
+.recipe .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+footer {
+    height: 100px;
+    width: 87vw;
+    position: relative;
+    top: 70px;
+    left:90px;
+    border-radius: 10px;
+    background-color: rgba(192, 192, 192, 0.5);
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.foot img{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 10px;
+    max-height: 200px;
+    max-width: 135px;
+}
+.foot h1 {
+    position: absolute;
+    top:0px;
+    left:110px;
+    font-size: 38px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+.foot h2 {
+    position: absolute;
+    top:48px;
+    left: 110px;
+    fornt-size:20px;
+    color: #333;
+}
+
+.form_field label{
+    position: relative;
+    top: -25px;
+    left: -65px;
+    width: 70px;
+}
+
+.form_field input{
+    position: relative;
+    top: -50px;
+    margin-bottom: 13px;
+    background-color: rgba(193, 193, 193, 193);
+    border: none;
+    left: 10px;
+    height: 30px;
+    width: 250px;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.form_btn button{
+    font-family: monospace;
+    font-size: 24px;
+    position: relative;
+    top: -30px;
+    left: 30px;
+    height: 40px;
+    width: 180px;
+    background-color: rgba(152, 251, 152, 1);
+    border-radius: 50px;
+    border: none;
+}
+
+.divider{
+    position: relative;
+    left: 75px;
+    top: -10px;
+}
+
+.randomImage {
+  max-width: 200px; /* Максимальная ширина изображения равна ширине панели */
+  height: 200px /* Автоматическая высота изображения */
+}
+
+.Favo{
+    position: relative;
+    left: 70px;
+    top: -37px;
+    text-decoration: none;
+    background-color: #FFFF00;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-color: white;
+}
+
+
+.pk{
+front-size: 24px;
+
+}

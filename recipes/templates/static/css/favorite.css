@@ -1,0 +1,69 @@
+.panelll{
+    position: relative;
+    top: -20px;
+    left: 85px;
+    border-radius: 30px;
+    background-color: rgba(192,192,192,0.5);
+    padding: 30px;
+    width: 87vw;
+    height: 400px;
+}
+
+.fav{
+    position: relative;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.write{
+    position: relative;
+    min-height:250px;
+    left: 70px;
+}
+
+.write i{
+    color: blue;
+    font-size: 40px;
+}
+
+.write a{
+    text-decoration: none;
+}
+
+.write h1{
+    color: black;
+    font-size: 30px;
+}
+
+.write p{
+    color: red;
+}
+
+.write .book{
+    position: relative;
+    top: 30px;
+    font-family: cursive ;
+    font-size: 25px;
+    color: brown;
+}
+
+.write .var{
+    position: relative;
+    top: 80px;
+    font-size: 25px;
+    color: black;
+}
+
+.bookpanel{
+    position: relative;
+    top: 100px;
+    left: 70px;
+    border-radius: 30px;
+    padding:30px;
+    width: 90vw;
+    max-height: 1000px;
+    background-color: rgba(193, 193, 193, 0.9);
+}

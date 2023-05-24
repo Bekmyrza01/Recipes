@@ -1,0 +1,115 @@
+.page_panel{
+	position: relative;
+    top: 50px;
+    left: 90px;
+    border-radius: 10px;
+    background-color: rgba(192,192,192,0.5);
+    padding: 30px;
+    width: 87vw;
+    overflow: auto;
+}
+
+.receip_panel{
+	position: relative;
+    top: 50px;
+    left: 90px;
+    border-radius: 10px;
+    background-color: rgba(192,192,192,0.5);
+    padding: 30px;
+    width: 87vw;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.receip_panel > div{
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.imageContainer {
+	position: relative;
+	top: 10px;
+	left: 60px;
+}
+
+.conteiner {
+	display: flex;
+}
+
+.receip_panel img {
+	position: relative;
+	border-radius: 50px;
+	max-width: 280px;
+	max-height: 280px;
+}
+
+hr {
+	position: relative;
+	top: 10px;
+}
+
+.imgg {
+	border-radius: 50px;
+	max-width: 318px;
+	max-height: 400px;
+}
+.imgg p{
+fon-size: 30px;
+font-family: cursive;}
+
+.ingredient {
+	position: relative;
+	left: 80px;
+	max-height: 300px;
+	width: 53.95vw;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+	border-radius: 30px;
+	padding: 40px;
+	overflow: auto;
+}
+.ingredient h2{
+	font-size: 24px;
+}
+.instruction {
+	position: relative;
+	top: 20px;
+	max-height: 700px;
+	max-width: 80vw;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+	border-radius: 30px;
+	padding: 40px;
+	overflow: auto;
+}
+.ingredient p {
+	font-size: 20px ;
+	font-style: italic;
+	color: #333;
+}
+.instruction p {
+	font-size: 22px ;
+	font-family: cursive;
+	color: #333;
+}
+
+.receip_panel p{
+	font-size: 24px;
+	font-family: cursive;
+	text-align: center;
+}
+
+.receip_panel div {
+	position: relative;
+	border-radius: 30px;
+	border-color: darkblue;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 5px;
+	height: 330px;
+	max-width: 290px;
+}
+
+.booook{
+    font-color:black;
+}

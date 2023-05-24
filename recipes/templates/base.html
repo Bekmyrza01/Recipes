@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>По маминому рецепту</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/page_style.css' %}">
+    <link href="{% static 'css/favorite.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="icon" type="image/x-icon" href="{% static 'image/icon.jpg' %}">
+    <script src="{% static 'crm/scripts.js' %}"></script>
+    <style>
+        body {
+            background-image: url("/static/image/background.jpg");
+            background-size: 1680px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">По маминому рецепту</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="{% url 'index' %}" class= "btn1">Главная</a>
+                </li>
+                <li><a href="{% url 'dishes' %}" class="btn1">Все рецепты  </a></li>
+                {% if user.is_authenticated %}
+                  <li><a href="{% url 'logout' %}" class="btn1">&#10048;Выйти</a></li>
+                {% else %}
+                  <li><a href="{% url 'login' %}" class="btn1">&#10048;Войти</a></li>
+                {% endif %}
+            </ul>
+            <div class="search-bar">
+                <form method="GET" action="{% url 'search' %}">
+                    <input type="text" name="query" placeholder="Поиск...">
+                    <button href="{% url 'search' %}" type="submit">Найти</button>
+                </form>
+            </div>
+        </nav>
+        <hr size="3">
+        <section class="categories">
+            <p>- Подобать рецепт -</p>
+            <ul>
+                <form method="GET" id="category_form">
+                    <li>
+                        <input type="hidden" name="menu" value="{{ selected_menu }}">
+                        <input type="hidden" name="bludo" value="{{ selected_bludo }}">
+                        <input type="hidden" name="cuisine" value="{{ selected_cuisine }}">
+
+                        <select id="category_select" name="category">
+                            <option value="all" {% if not selected_category %}selected{% endif %}>Любая категория</option>
+                            {% for category in categories %}
+                                <option value="{{ category.name }}" {% if category.name == selected_category %}selected{% endif %}>{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </li>
+                </form>
+
+                <form method="GET" id="bludo_form">
+                    <li>
+                        <input type="hidden" name="category" value="{{ selected_category }}">
+                        <input type="hidden" name="menu" value="{{ selected_menu }}">
+                        <input type="hidden" name="cuisine" value="{{ selected_cuisine }}">
+
+                        <select id="bludo_select" name="bludo">
+                            <option value="all" {% if not selected_bludo %}selected{% endif %}>Любое блюдо</option>
+                            {% if selected_bludo != 'all' %}
+                                {% for bludo in bludos %}
+                                <option value="{{ bludo.name }}" {% if bludo.name == selected_bludo %}selected{% endif %}>{{ bludo.name }}</option>
+                                {% endfor %}
+                            {% endif %}
+                        </select>
+                    </li>
+                </form>
+
+                <form method="GET" id="cuisine_form">
+                    <li>
+                        <input type="hidden" name="category" value="{{ selected_category }}">
+                        <input type="hidden" name="bludo" value="{{ selected_bludo }}">
+                        <input type="hidden" name="menu" value="{{ selected_cmenu }}">
+
+                        <select id="cuisine_select" name="cuisine">
+                            <option value="all" {% if not selected_cuisine %}selected{% endif %}>Любая кухня</option>
+                            {% for cuisine in cuisines %}
+                            <option value="{{ cuisine.name }}" {% if cuisine.name == selected_cuisine %}selected{% endif %}>{{ cuisine.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </li>
+                </form>
+
+                <form method="GET" id="menu_form">
+                    <li>
+                        <input type="hidden" name="category" value="{{ selected_category }}">
+                        <input type="hidden" name="bludo" value="{{ selected_bludo }}">
+                        <input type="hidden" name="cuisine" value="{{ selected_cuisine }}">
+
+                        <select id="menu_select" name="menu">
+                            <option value="all" {% if not selected_menu %}selected{% endif %}>Любое меню</option>
+                            {% for menu in menus %}
+                            <option value="{{ menu.name }}" {% if menu.name == selected_menu %}selected{% endif %}>{{ menu.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </li>
+                </form>
+
+                <script>
+                    const categoryForm = document.getElementById('category_form');
+                    const bludoForm = document.getElementById('bludo_form');
+                    const cuisineForm = document.getElementById('cuisine_form');
+                    const menuForm = document.getElementById('menu_form');
+
+                    const categorySelect = document.getElementById('category_select');
+                    const bludoSelect = document.getElementById('bludo_select');
+                    const cuisineSelect = document.getElementById('cuisine_select');
+                    const menuSelect = document.getElementById('menu_select');
+
+                    categorySelect.addEventListener('change', function() {
+                        categoryForm.submit();
+                    });
+
+                    bludoSelect.addEventListener('change', function() {
+                        bludoForm.submit();
+                    });
+
+                    cuisineSelect.addEventListener('change', function() {
+                        cuisineForm.submit();
+                    });
+
+                    menuSelect.addEventListener('change', function() {
+                        menuForm.submit();
+                    });
+                </script>
+
+                <li><a href="{% url 'pick_up' %}" class="btn">Подобрать рецепты</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'favorite_recipes' %}" class="Favo">Книга рецептов</a></li>
+                {% endif %}
+            </ul>
+        </section>
+    </header>
+{% block content %}
+{% endblock %}
+

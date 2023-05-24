@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+<div class="panel_sign">
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form_field">
+            <label>&nbsp;&nbsp;&nbsp;Логин:</label>
+            <input type="text" name="username" placeholder="    логин">
+        </div>
+        <div class="form_field">
+            <label>Пароль:</label>
+            <input type="password" name="password" placeholder="    пароль">
+        </div>
+        <div class="form_btn">
+            <button type="submit" class="sign_btn">Войти</button>
+        </div>
+        <div class="form_btn">
+
+            <div class="divider">
+                <a href="{% url 'register' %}">Регистрация</a>
+            </div>
+        </div>
+    </form>
+
+</div>
+</body>
+<footer class="foot">
+    <img src="/static/image/icon.jpg">
+    <h1>По маминому рецепту</h1>
+    <h2>Связаться с нами:&nbsp;&nbsp;&nbsp;&nbsp;+996(700)32-67-71</h2>
+</footer>
+
+{% endblock %}

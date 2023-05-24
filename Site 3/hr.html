@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Image Panel</title>
+  <style>
+    #panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 300px; /* Начальная ширина панели */
+      height: auto; /* Автоматическая высота панели */
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    #randomImage {
+      max-width: 100%; /* Максимальная ширина изображения равна ширине панели */
+      height: auto; /* Автоматическая высота изображения */
+    }
+
+    #randomText {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="panel">
+    <img id="randomImage" src="" alt="Random Image">
+    <p id="randomText"></p>
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      var panel = document.getElementById('panel');
+      var randomImage = document.getElementById('randomImage');
+      var randomText = document.getElementById('randomText');
+
+      var imagesFolder = 'image/receip_of_day/'; // Замените на путь к вашей папке с изображениями
+      var images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg']; // Массив имен изображений
+
+      // Функция для получения случайного элемента из массива
+      function getRandomItem(array) {
+        return array[Math.floor(Math.random() * array.length)];
+      }
+
+      // Генерация случайного изображения и текста при загрузке страницы
+      var randomImageName = getRandomItem(images);
+      randomImage.src = imagesFolder + randomImageName;
+      randomText.textContent = 'Random Image: ' + randomImageName;
+
+      // Обновление размеров панели после загрузки изображения
+      randomImage.addEventListener('load', function() {
+        panel.style.width = randomImage.width + 'px';
+        panel.style.height = randomImage.height + 'px';
+      });
+    });
+  </script>
+</body>
+</html>

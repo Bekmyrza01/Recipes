@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+<div class="panel_sign">
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="form_field">
+            <label>&nbsp;&nbsp;&nbsp;Почта:</label>
+            <input type="email" name="email" placeholder="    почта" required>
+        </div>
+        <div class="form_field">
+            <label>&nbsp;&nbsp;&nbsp;Логин:</label>
+            <input type="text" name="username" placeholder="    логин" required>
+        </div>
+        <div class="form_field">
+            <label>Пароль:</label>
+            <input type="password" name="password1" placeholder="    пароль" required>
+        </div>
+        <div class="form_field">
+            <label>Подтвердите пароль:</label>
+            <input type="password" name="password2" placeholder="    подтвердите пароль" required>
+        </div>
+        <div class="form_btn">
+            <button class="sign_btn">&nbsp;Регистрация</button>
+        </div>
+    </form>
+</div>
+</body>
+<footer class="foot">
+    <img src="/static/image/icon.jpg">
+    <h1>По маминому рецепту</h1>
+    <h2>Связаться с нами:&nbsp;&nbsp;&nbsp;&nbsp;+996(700)32-67-71</h2>
+</footer>
+{% endblock %}

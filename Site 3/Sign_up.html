@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="image/icon_p.jpg">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>По маминому рецепту</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        body {
+            background-image: url("image/background.jpg");
+            background-size: 1490px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<header>
+        <nav>
+             <link rel="stylesheet" type="text/css" href="css/styles.css">
+            <div class="logo">
+                <a href="#">По маминому рецепту</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="receipt.html" class= "btn1">Главный</a>
+                </li>
+                <li>
+                    <a href="all_recipes.html" class="btn1">Все рецепты  </a>
+                </li>
+                <li>
+                    <a href="Sign_in.html" class="btn1">&#10048;Войти  </a>
+                </li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск...">
+                <button type="submit">Найти</button>
+            </div>
+        </nav>
+        <hr size="3">
+        <section class="categories">
+            <p>-Подбор рецептов-</p>
+            <ul>
+                <li><select id="category_select">
+                        <option value="all">Любая категория</option>
+                        <option value="cat1">Завтраки</option>
+                        <option value="cat2">Закуски</option>
+                        <option value="cat3"></option>
+                        <option value="cat4"></option>
+                        <option value="cat5"></option>
+                    </select></li>
+                <li><select id="category_select">
+                        <option value="all">Любое блюдо</option>
+                        <option value="cat1"></option>
+                        <option value="cat2"></option>
+                        <option value="cat3"></option>
+                        <option value="cat4"></option>
+                        <option value="cat5"></option>
+                    </select></li>
+                <li><select id="category_select">
+                        <option value="all">Любая кухня</option>
+                        <option value="cat1"></option>
+                        <option value="cat2"></option>
+                        <option value="cat3"></option>
+                        <option value="cat4"></option>
+                        <option value="cat5"></option>
+                    </select></li>
+                <li><select id="category_select">
+                        <option value="all">Любое меню</option>
+                        <option value="cat1"></option>
+                        <option value="cat2"></option>
+                        <option value="cat3"></option>
+                        <option value="cat4"></option>
+                        <option value="cat5"></option>
+                    </select> </li>
+                <li><select id="category_select">
+                        <option value="all">Ингредиенты, детали</option>
+                        <option value="cat1"></option>
+                        <option value="cat2"></option>
+                        <option value="cat3"></option>
+                        <option value="cat4"></option>
+                        <option value="cat5"></option>
+                    </select></li>
+                <li><a href="" class="btn">Подобрать рецепты</a></li>
+            </ul>
+        </section>
+    </header>
+<body>
+    <main>
+        <div class="panel_sign">
+            <div class="form_field">
+                <label>&nbsp;&nbsp;&nbsp;Почта:</label>
+                <input type="text" placeholder="    почта">
+            </div>
+            <div class="form_field">
+                <label>&nbsp;&nbsp;&nbsp;Логин:</label>
+                <input type="text" placeholder="    логин">
+            </div>
+            <div class="form_field">
+                <label>Пароль:</label>
+                <input type="password" placeholder="    пароль">
+            </div>
+            <div class="form_btn">
+                <button class="sign_btn">&nbsp;Регистрация</button>
+            </div>
+        </div>
+    </main>
+    <iframe src="footer.html" frameborder="0" width="100%" height="200"></iframe>
+</body>
